@@ -1,5 +1,8 @@
 #include "Database.h"
 
+/// <summary>
+/// empty constructor for the database
+/// </summary>
 Database::Database() {
 	_name = "Sans nom";
 	vector<Table> _tables;
@@ -30,10 +33,13 @@ string Database::getName(){
 void Database::setName(string name){
 	_name = name;
 }
-void Database::displayDatabase() {
 
+string Database::displayDatabase() {
+
+	string allDataBaseToString;
 	for (int i = 0; i < _tables.size(); i++) {
-		_tables[i].displayTable();
-		cout << endl;
+		allDataBaseToString+= _tables[i].displayTable();
+		allDataBaseToString += "\n";
 	}
+	return allDataBaseToString;
 }

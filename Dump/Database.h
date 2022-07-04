@@ -10,7 +10,7 @@ using namespace std;
 
 class Database
 {
-private:
+public:
 	string _name;
 	vector<Table> _tables;
 
@@ -25,6 +25,6 @@ public:
 	string getName();
 	void setName(string name);
 
-	void displayDatabase();
+	string displayDatabase();
 };
 #endif

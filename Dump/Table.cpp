@@ -7,6 +7,9 @@ Table::Table(vector<vector<string>> fulltable,vector<string> columns,string name
 	_columns = columns;
 }
 
+/// <summary>
+/// empty version of the constructor constructor
+/// </summary>
 Table::Table(){
 	string _name = "Nameless column";
 	vector<string> _columns;
@@ -25,7 +28,6 @@ vector<string> Table::getColumns() {
 /// Set a column's values after it has been instansiated in addColumn
 /// </summary>
 /// <param name="columns">column's values</param>
-
 void Table::setColumns(vector<string> columns) {
 	if (columns.size() <= _data.size()) {
 
@@ -59,18 +61,33 @@ void Table::setName(string name) {
 	_name = name;
 }
 
-void Table::displayTable() {
 
+string Table::displayTable() {
+
+	string allTableToString;
 	for (int i = 0; i < _columns.size(); i++) {
-		cout << _columns[i] << " ";
+		allTableToString += _columns[i] + " ";
 	}
-	cout << endl<< endl;
+	allTableToString +="\n\n";
 
 	for (int i = 0; i < _data.size(); i++) {
 		for (int j = 0; j < _data[i].size(); j++) {
 
-			cout << _data[i][j] + " ";
+			allTableToString+= _data[i][j] + " ";
 		}
-		cout << endl;
+		allTableToString +="\n";
 	}
+	return allTableToString;
+}
+
+string Table::Getname() {
+	return _name;
+}
+
+vector<string> Table::Getcolumn() {
+	return _columns;
+}
+
+vector<vector<string>> Table::Getdata() {
+	return _data;
 }

@@ -206,6 +206,10 @@ void SqliteExtractor::dumpAllTables(string sql, Database  &dbase)
     }
 }
 
+/// <summary>
+/// Display all the fields in a the database
+/// </summary>
+/// <param name="dbase">The pseudo-database we're writting on</param>
 void SqliteExtractor::dumpAllTheThing(Database & dbase)
 {
     string const fileName("C:/Users/stagiaire/Desktop/Dump/FichierTest.txt");

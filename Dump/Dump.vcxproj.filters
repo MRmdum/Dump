@@ -31,19 +31,19 @@
     <Filter Include="Fichiers sources\Models">
       <UniqueIdentifier>{0bfc3419-1119-4cc3-a423-baa3e15aa290}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\External">
+      <UniqueIdentifier>{5d63a29c-5503-4c0c-943f-8aa277f186e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\External">
+      <UniqueIdentifier>{ec564164-8ca9-480a-a7bb-6fba3b688a41}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Dump.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.c">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="Dumper.cpp">
       <Filter>Fichiers sources\Dumper</Filter>
-    </ClCompile>
-    <ClCompile Include="SqliteExtractor.cpp">
-      <Filter>Fichiers sources\Extractor</Filter>
     </ClCompile>
     <ClCompile Include="Table.cpp">
       <Filter>Fichiers sources\Models</Filter>
@@ -54,22 +54,28 @@
     <ClCompile Include="SqliteDumper.cpp">
       <Filter>Fichiers sources\Dumper</Filter>
     </ClCompile>
-    <ClCompile Include="Extractor.cpp">
+    <ClCompile Include="TxtExtractor.cpp">
+      <Filter>Fichiers sources\Extractor</Filter>
+    </ClCompile>
+    <ClCompile Include="Sockets.cpp">
+      <Filter>Fichiers sources\External</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.c">
+      <Filter>Fichiers sources\External</Filter>
+    </ClCompile>
+    <ClCompile Include="TCPSocket.cpp">
+      <Filter>Fichiers sources\External</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpExtractor.cpp">
       <Filter>Fichiers sources\Extractor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
     <ClInclude Include="Dumper.h">
       <Filter>Fichiers d%27en-tête\Dumper</Filter>
     </ClInclude>
     <ClInclude Include="Table.h">
       <Filter>Fichiers d%27en-tête\Models</Filter>
-    </ClInclude>
-    <ClInclude Include="MockExtractor.h">
-      <Filter>Fichiers d%27en-tête\Extractor</Filter>
     </ClInclude>
     <ClInclude Include="Extractor.h">
       <Filter>Fichiers d%27en-tête\Extractor</Filter>
@@ -77,11 +83,26 @@
     <ClInclude Include="Database.h">
       <Filter>Fichiers d%27en-tête\Models</Filter>
     </ClInclude>
-    <ClInclude Include="SqliteExtractor.h">
-      <Filter>Fichiers d%27en-tête\Extractor</Filter>
-    </ClInclude>
     <ClInclude Include="SqliteDumper.h">
       <Filter>Fichiers d%27en-tête\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="Sockets.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="TCPSocket.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="TxtExtractor.h">
+      <Filter>Fichiers d%27en-tête\Extractor</Filter>
+    </ClInclude>
+    <ClInclude Include="Dump.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpExtractor.h">
+      <Filter>Fichiers d%27en-tête\Extractor</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

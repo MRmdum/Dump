@@ -70,6 +70,9 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>C:\local\curlpp-0.8.1;C:\local\boost_1_79_0;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -104,10 +107,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\stagiaire\Desktop\Dump\curlpp-0.8.1;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -133,20 +138,25 @@
     <ClCompile Include="Dumper.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="Extractor.cpp" />
+    <ClCompile Include="HttpExtractor.cpp" />
+    <ClCompile Include="Sockets.cpp" />
     <ClCompile Include="SqliteDumper.cpp" />
-    <ClCompile Include="SqliteExtractor.cpp" />
     <ClCompile Include="Table.cpp" />
+    <ClCompile Include="TCPSocket.cpp" />
+    <ClCompile Include="TxtExtractor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.h" />
     <ClInclude Include="Database.h" />
+    <ClInclude Include="Dump.h" />
     <ClInclude Include="Dumper.h" />
     <ClInclude Include="Extractor.h" />
-    <ClInclude Include="MockExtractor.h" />
+    <ClInclude Include="HttpExtractor.h" />
+    <ClInclude Include="Sockets.h" />
     <ClInclude Include="SqliteDumper.h" />
-    <ClInclude Include="SqliteExtractor.h" />
     <ClInclude Include="Table.h" />
+    <ClInclude Include="TCPSocket.h" />
+    <ClInclude Include="TxtExtractor.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

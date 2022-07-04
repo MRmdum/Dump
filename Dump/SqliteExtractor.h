@@ -17,7 +17,6 @@ private:
 
 	static vector<vector<string>> m_buffer;
 
-
 	string dumpTable(string nomTable,Database & dbase);
 	vector <string> enumerateTables(string sql);
 	

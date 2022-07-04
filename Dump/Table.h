@@ -15,6 +15,10 @@ private:
 	vector<vector<string>> _data;
 
 public:
+	string Getname();
+	vector<string> Getcolumn();
+	vector<vector<string>> Getdata();
+
 	Table();
 	Table(vector<vector<string>> fulltable,vector<string> columns,string name);
 	virtual ~Table();
@@ -29,6 +33,6 @@ public:
 	string getName();
 	void setName(string name);
 
-	void displayTable();
+	string displayTable();
 };
 #endif
