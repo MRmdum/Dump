@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Dumper">
+      <UniqueIdentifier>{98adcfce-524b-48ee-bfcd-a9d15d4d2732}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Extractor">
+      <UniqueIdentifier>{7b9edc05-7514-49c7-af3b-862d91946e30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Models">
+      <UniqueIdentifier>{357b72ad-f180-4bdc-a67f-d7f5b386c395}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Dumper">
+      <UniqueIdentifier>{ba477ff6-67c8-471b-bd1c-f303b02d7ec3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Extractor">
+      <UniqueIdentifier>{c8502f8e-600e-4af6-a44d-bd93d50c9191}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Models">
+      <UniqueIdentifier>{0bfc3419-1119-4cc3-a423-baa3e15aa290}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\External">
+      <UniqueIdentifier>{5d63a29c-5503-4c0c-943f-8aa277f186e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\External">
+      <UniqueIdentifier>{ec564164-8ca9-480a-a7bb-6fba3b688a41}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Dump.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Dumper.cpp">
+      <Filter>Fichiers sources\Dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="Table.cpp">
+      <Filter>Fichiers sources\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="Database.cpp">
+      <Filter>Fichiers sources\Models</Filter>
+    </ClCompile>
+    <ClCompile Include="SqliteDumper.cpp">
+      <Filter>Fichiers sources\Dumper</Filter>
+    </ClCompile>
+    <ClCompile Include="TxtExtractor.cpp">
+      <Filter>Fichiers sources\Extractor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.c">
+      <Filter>Fichiers sources\External</Filter>
+    </ClCompile>
+    <ClCompile Include="HttpExtractor.cpp">
+      <Filter>Fichiers sources\Extractor</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Dumper.h">
+      <Filter>Fichiers d%27en-tête\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="Table.h">
+      <Filter>Fichiers d%27en-tête\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="Extractor.h">
+      <Filter>Fichiers d%27en-tête\Extractor</Filter>
+    </ClInclude>
+    <ClInclude Include="Database.h">
+      <Filter>Fichiers d%27en-tête\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="SqliteDumper.h">
+      <Filter>Fichiers d%27en-tête\Dumper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.h">
+      <Filter>Fichiers d%27en-tête\External</Filter>
+    </ClInclude>
+    <ClInclude Include="TxtExtractor.h">
+      <Filter>Fichiers d%27en-tête\Extractor</Filter>
+    </ClInclude>
+    <ClInclude Include="Dump.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="HttpExtractor.h">
+      <Filter>Fichiers d%27en-tête\Extractor</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>
