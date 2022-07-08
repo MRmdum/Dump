@@ -3,43 +3,13 @@
 
 SqliteDumper::SqliteDumper(Extractor* extractor){}
 
+//temporary table to write all needed data
 vector<vector<string>>  SqliteDumper::m_buffer;
-
-void SqliteDumper::WriteTable()
-{
-    sqlite3* m_bdd;
-
-    string sql;
-    cout << "Entrez commande SQL";
-    cin >> sql;
-
-    bool exist;
-    char* ErrorMessage = 0;
-
-    string const file = "C:/Users/stagiaire/Desktop/Dump/db.sqlite3";
-
-    const char* data = "Callback function called";
-
-    /* Open database */
-    exist = sqlite3_open(file.c_str(), &m_bdd);
-
-    if (exist) {
-        cout << "Can't open database: %s" << endl << sqlite3_errmsg(m_bdd) << endl;
-    }
-    else {
-        //cout << "Opened database successfully" << endl;
-    }
-
-    //Execute
-    exist = sqlite3_exec(m_bdd, sql.c_str(), SqlCallback, (void*)data, &ErrorMessage);
-
-    sqlite3_close(m_bdd);
-}
 
 /// <summary>
 /// Function called to iterate on each row
 /// </summary>
-/// <param name="data">storage unused</param>
+/// <param name="data">storage unused here</param>
 /// <param name="argc">number of columns in the data base</param>
 /// <param name="argv">value in the columns</param>
 /// <param name="azColName">columns' names</param>
@@ -49,12 +19,13 @@ int SqliteDumper::SqlCallback(void* data, int argc, char** argv, char** azColNam
 
     int i;
     vector<string> temp_buff;
-    //fprintf(stderr, "%s: ", (const char*)data);
 
     for (i = 0; i < argc; i++) {
         //cout << azColName[i] << " = " << (argv[i] ? argv[i] : "NULL") << endl;
         if (argv[i]) temp_buff.push_back(argv[i]);
     }
+
+    //add row
     m_buffer.push_back(temp_buff);
 
     return 0;
@@ -65,10 +36,13 @@ int SqliteDumper::SqlCallback(void* data, int argc, char** argv, char** azColNam
 /// </summary>
 vector<string> SqliteDumper::enumerateTables(string sql)
 {
+    //database which will be altered
     sqlite3* m_bdd;
 
     bool exist;
     char* ErrorMessage = 0;
+
+    //NOT absolute path: needs to be replaced
     string const file = "C:/Users/stagiaire/Desktop/Dump/db.sqlite3";
 
     const char* data = "Callback function called";
@@ -83,7 +57,7 @@ vector<string> SqliteDumper::enumerateTables(string sql)
         //cout << "Opened database successfully" << endl;
     }
 
-    //Execute
+    //Execute sql query
     exist = sqlite3_exec(m_bdd, sql.c_str(), SqliteDumper::SqlCallback, (void*)data, &ErrorMessage);
 
     vector<string> tablesName;
@@ -215,7 +189,7 @@ Database SqliteDumper::dump(map<string, string> parameters) {
     //cout << database.displayDatabase();
     cout << endl << "|||Ending output DB|||" << endl;
 
-    m_instance->extract(database);
+    m_instance->extract(database,parameters);
 
     return database;
 }

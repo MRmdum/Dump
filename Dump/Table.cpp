@@ -1,6 +1,5 @@
 #include "Table.h"
 
-
 Table::Table(vector<vector<string>> fulltable,vector<string> columns,string name){
 	_name = name;
 	_data = fulltable;

@@ -11,10 +11,6 @@ Database::Database() {
 	cout << "database initiated" << endl;
 }
 
-Database::Database(string fullTable) {	
-
-}
-
 Database::Database::~Database(){
 }
 

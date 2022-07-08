@@ -57,13 +57,7 @@
     <ClCompile Include="TxtExtractor.cpp">
       <Filter>Fichiers sources\Extractor</Filter>
     </ClCompile>
-    <ClCompile Include="Sockets.cpp">
-      <Filter>Fichiers sources\External</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.c">
-      <Filter>Fichiers sources\External</Filter>
-    </ClCompile>
-    <ClCompile Include="TCPSocket.cpp">
       <Filter>Fichiers sources\External</Filter>
     </ClCompile>
     <ClCompile Include="HttpExtractor.cpp">
@@ -87,12 +81,6 @@
       <Filter>Fichiers d%27en-tête\Dumper</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Desktop\Dump\sqlite-amalgamation-3380500\sqlite-amalgamation-3380500\sqlite3.h">
-      <Filter>Fichiers d%27en-tête\External</Filter>
-    </ClInclude>
-    <ClInclude Include="Sockets.h">
-      <Filter>Fichiers d%27en-tête\External</Filter>
-    </ClInclude>
-    <ClInclude Include="TCPSocket.h">
       <Filter>Fichiers d%27en-tête\External</Filter>
     </ClInclude>
     <ClInclude Include="TxtExtractor.h">

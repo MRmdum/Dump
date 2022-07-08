@@ -6,7 +6,7 @@
 class HttpExtractor : public Extractor
 {
 public:
-	virtual void extract(Database& database);
+	virtual void extract(Database& database,map<string,string>parameters);
 };
 #endif
 

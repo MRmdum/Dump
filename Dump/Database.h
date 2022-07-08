@@ -10,13 +10,14 @@ using namespace std;
 
 class Database
 {
+
+//needs to be private !
 public:
 	string _name;
 	vector<Table> _tables;
 
 public:
 	Database();
-	Database(string fullTable);
 	virtual ~Database();
 
 	void addTable(Table table);

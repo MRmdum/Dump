@@ -9,6 +9,6 @@ protected:
 
 public:
 	//Extractor(Database&database);
-	virtual void extract(Database & database)=0;
+	virtual void extract(Database & database,map<string,string> parameters)=0;
 };
 #endif

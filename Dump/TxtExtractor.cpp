@@ -2,7 +2,7 @@
 #include <fstream>
 
 /// <summary>
-/// Wrtie and present the database on a .txt file
+/// Wrtie and present the database on a .txt file with a basic presentation
 /// </summary>
 /// <param name="database">the database to extract</param>
 void TxtExtractor::extract(Database & database) {
@@ -29,7 +29,10 @@ void TxtExtractor::extract(Database & database) {
 		}
 		alltables += "\n";		
 	}
+		//NOT absolute path: needs to be replaced
 		ofstream Myflow("C:/Users/stagiaire/Desktop/Dump/FichierTest.txt");
+
+		//write & close the file
 		Myflow << alltables;
 		Myflow.close(); 
 }

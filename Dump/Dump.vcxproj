@@ -139,10 +139,8 @@
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="HttpExtractor.cpp" />
-    <ClCompile Include="Sockets.cpp" />
     <ClCompile Include="SqliteDumper.cpp" />
     <ClCompile Include="Table.cpp" />
-    <ClCompile Include="TCPSocket.cpp" />
     <ClCompile Include="TxtExtractor.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -152,10 +150,8 @@
     <ClInclude Include="Dumper.h" />
     <ClInclude Include="Extractor.h" />
     <ClInclude Include="HttpExtractor.h" />
-    <ClInclude Include="Sockets.h" />
     <ClInclude Include="SqliteDumper.h" />
     <ClInclude Include="Table.h" />
-    <ClInclude Include="TCPSocket.h" />
     <ClInclude Include="TxtExtractor.h" />
   </ItemGroup>
   <ItemGroup>

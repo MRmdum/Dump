@@ -27,7 +27,6 @@ protected:
 public:
 	SqliteDumper(Extractor* extractor);
 	void dumpAllTables(string sql, Database& dbase);
-	void WriteTable();
 	void dumpAllTheThing(Database& dbase);
 	virtual Database dump(map<string, string> parameters);
 };

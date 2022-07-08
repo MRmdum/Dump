@@ -25,8 +25,9 @@ namespace http = beast::http;       // from <boost/beast/http.hpp>
 namespace net = boost::asio;        // from <boost/asio.hpp>
 using tcp = net::ip::tcp;           // from <boost/asio/ip/tcp.hpp>
 
-void HttpExtractor::extract(Database& database) {
+void HttpExtractor::extract(Database& database,map<string,string> parameters) {
 
+    //might want to replace argv by parameters value
     int argc = 4;
     char* argv[] = {(char*)"./Dump",(char*)"localhost",(char*)"8000",(char*)"/",(char*)"aaaa"};
 
@@ -42,6 +43,7 @@ void HttpExtractor::extract(Database& database) {
                 "    http-client-sync www.example.com 80 / 1.0\n";
         }
 
+        //value to replace by parameters
         auto const host = "localhost";//argv[1];
         auto const port = "8000";//argv[2];
         auto const target = "db.sqlite3";//argv[3];
